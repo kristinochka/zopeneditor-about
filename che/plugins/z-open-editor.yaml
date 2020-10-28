@@ -9,9 +9,9 @@ publisher: IBM
 name: zopeneditor
 version: latest
 type: VS Code extension
-displayName: IBM Z Open Editor
-title: IBM Z Open Editor with Language Support for COBOL, PL/I, and HLASM
-description: Provides COBOL, PL/I, and HLASM language servers as well as tools for IBM Z development.
+displayName: Zowe Explorer Dev
+title: Zowe Explorer dev enviroment with TypeScript tools
+description: Provides Node and TypeScript enviroment for Zowe developers.
 icon: https://www.eclipse.org/che/images/logo-eclipseche.svg
 repository: https://github.com/IBM/zopeneditor-about.git
 category: Language
