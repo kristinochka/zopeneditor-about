@@ -10,10 +10,10 @@
       generateName: IBM-Z-Open-Editor-
   projects:
     -
-      name: ibm-zopeneditor-sample
+      name: vscode-extension-for-zowe
       source:
         type: git
-        location: "https://github.com/IBM/zopeneditor-sample.git"
+        location: "https://github.com/zowe/vscode-extension-for-zowe"
   components:
     -
       type: chePlugin
