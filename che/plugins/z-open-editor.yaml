@@ -18,5 +18,5 @@ category: Language
 firstPublicationDate: "2019-10-03"
 spec:
   extensions:
-  - http://rtpgsa.ibm.com/projects/w/wazi/temp/zopeneditor-1.2.0-948d687f.vsix
+  - http://rtpgsa.ibm.com/projects/w/wazi/temp/zopeneditor-1.2.0-1ae76d0d.vsix
   - https://github.com/IBM/zopeneditor-about/releases/download/1.0.2/Zowe.vscode-extension-for-zowe-1.6.0.vsix
