@@ -1,21 +1,43 @@
-# Licensed Materials - Property of IBM
-# (C) Copyright IBM Corporation 2019, 2020. All Rights Reserved.
 #
-# Note to U.S. Government Users Restricted Rights:
-# Use, duplication or disclosure restricted by GSA ADP Schedule
-# Contract with IBM Corp.
+# Copyright IBM Corporation 2021
+# This program and the accompanying materials are made
+# available under the terms of the Eclipse Public License 2.0
+# which is available at https://www.eclipse.org/legal/epl-2.0/
+#
+# SPDX-License-Identifier: EPL-2.0
+#
+# Contributors:
+#   IBM Corporation - implementation
+#
+
 apiVersion: v2
-publisher: IBM
-name: zopeneditor
-version: latest
+publisher: ibm
+name: wazi-developer
+version: 1.2.0
 type: VS Code extension
-displayName: Zowe Explorer Dev
-title: Zowe Explorer dev enviroment with TypeScript tools
-description: Provides Node and TypeScript enviroment for Zowe developers.
-icon: https://www.eclipse.org/che/images/logo-eclipseche.svg
+displayName: Wazi Developer
+title: IBM Z Open Editor 1.2.0 with IBM Z Enterprise COBOL 6.3, PL/I 5.3, HLASM 2.4, TSO/E REXX, Zowe Explorer 1.12.1
+description: Provides COBOL, PL/I, HLASM language servers and tools for IBM Z development.
+icon: https://raw.githubusercontent.com/IBM/zopeneditor-about/master/che/images/ibm-wazi-developer.svg
 repository: https://github.com/IBM/zopeneditor-about.git
 category: Language
-firstPublicationDate: "2019-10-03"
+firstPublicationDate: "2021-03-19"
 spec:
+  containers:
+  - image: docker.io/ibmcom/wazi-code-codeready@sha256:aad811a525b8445bd7a0b5d8591483e9f8a48ce6f2f1a06f13dee7ea4921c2e7
+    name: ibm-wazi
+    memoryLimit: "3000Mi"
+    args:
+      - sh
+      - -c
+      - ${PLUGIN_REMOTE_ENDPOINT_EXECUTABLE}
+    volumes:
+    - mountPath: "/home/wazi/.zowe"
+      name: wazi
+    - mountPath: "/home/wazi/.m2"
+      name: m2
+    - mountPath: "/home/wazi/.debug"
+      name: debug
   extensions:
+  - https://github.com/IBM/zopeneditor-about/releases/download/1.1.2/Zowe.vscode-extension-for-zowe-1.10.1.vsix
   - http://rtpgsa.ibm.com/projects/w/wazi/temp/zopeneditor-1.2.0-0db53836.vsix
