@@ -19,4 +19,3 @@ firstPublicationDate: "2019-10-03"
 spec:
   extensions:
   - http://rtpgsa.ibm.com/projects/w/wazi/temp/zopeneditor-1.2.0-0db53836.vsix
-  - https://github.com/IBM/zopeneditor-about/releases/download/1.1.2/Zowe.vscode-extension-for-zowe-1.10.1.vsix
